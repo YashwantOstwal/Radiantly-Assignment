@@ -26,7 +26,7 @@ export default function TechnologiesUsed() {
             <AnimatePresence>
               {show && 
               <>
-                <motion.div variants = {variants} initial = "opacity0" animate = "opacity1" exit = "opacity0" className = 'h-[80%] bg-black border-black border-4 bg-white rounded-xl pl-4 pr-3 py-2'>
+                <motion.div variants = {variants} initial = "opacity0" animate = "opacity1" exit = "opacity0" className = 'h-[80%] bg-black border-black border-4 rounded-xl pl-4 pr-3 py-2'>
                 <div className = 'h-full overflow-y-scroll'>
                   <MagicOnHover title = "ReactJS" clusterCloudOf4={['Components','Hooks','Functions','Props'] } />
                   <MagicOnHover title = "Tailwind CSS" clusterCloudOf4={['Flexbox','Grid','Typography','Responsivity'] } />
