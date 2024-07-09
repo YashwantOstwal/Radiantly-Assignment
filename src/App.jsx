@@ -1,4 +1,4 @@
-import { RecoilRoot, useRecoilValue } from 'recoil';
+import { useRecoilValue } from 'recoil';
 import {qnNumberAtom} from './atoms.jsx'
 import MCQTemplate from './components/mcqTemplate.jsx';
 import NextButton from './buttons/nextButton.jsx';
@@ -13,7 +13,7 @@ export default function App() {
   const questions = usefetchQuestions();
   const qnNumber = useRecoilValue(qnNumberAtom);
   return (
-    <RecoilRoot>
+    <>
       <TechnologiesUsed/>
       <div className = 'flex flex-col gap-10 text-[2.7vh] h-screen poppins-medium bg-neutral-100  overflow-hidden'>
           <TopBar/>
@@ -24,7 +24,7 @@ export default function App() {
           <PromptResultsButton questions = {questions}/>
         </div>
       </div>
-    </RecoilRoot>
+    </>
   )
 }
 
