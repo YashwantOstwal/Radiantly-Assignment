@@ -28,7 +28,7 @@ export default function PromptResultsButton({questions}){
                     End Game
             </motion.button>
             {showResults && 
-                <div className = 'absolute inset-0 backdrop-blur-sm flex justify-center items-center'>
+                <div className = 'fixed inset-0 backdrop-blur-sm flex justify-center items-center'>
                     <div className = 'poppins-bold md:w-[50%] w-[80%] aspect-[2/1] bg-white border-4 lg:border-8 border-black rounded-xl flex flex-col justify-center items-center gap-4'>
                         <div className = ''>Score: {score}/10</div>
                         <button className = 'bg-gray-400 px-3 py-2 rounded-full' onClick = {handleSetReviewMode}>Click to Review Answers</button>
