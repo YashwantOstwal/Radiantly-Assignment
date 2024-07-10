@@ -13,9 +13,8 @@ export default function App() {
   const questions = usefetchQuestions();
   const qnNumber = useRecoilValue(qnNumberAtom);
   return (
-    <>
-      <TechnologiesUsed/>
-      <div className = 'flex flex-col gap-10 text-[2.7vh] h-screen poppins-medium bg-neutral-100  overflow-hidden'>
+    <div className = 'bg-neutral-100 h-screen'>
+      <div className = 'flex flex-col gap-10 text-[2.7vh] poppins-medium overflow-y-auto'>
           <TopBar/>
           <MCQTemplate qn = {questions[qnNumber-1]}/>
         <div className = 'py-5 flex justify-center gap-4 flex-wrap'>
@@ -24,7 +23,8 @@ export default function App() {
           <PromptResultsButton questions = {questions}/>
         </div>
       </div>
-    </>
+      <TechnologiesUsed/>
+    </div>
   )
 }
 
