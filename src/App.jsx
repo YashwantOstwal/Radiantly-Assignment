@@ -14,8 +14,8 @@ export default function App() {
   const qnNumber = useRecoilValue(qnNumberAtom);
   return (
     <div className = 'bg-neutral-100 h-screen'>
-      <div className = 'flex flex-col gap-10 text-[2.7vh] poppins-medium overflow-y-auto'>
-          <TopBar/>
+        <TopBar/>
+      <div className = 'flex flex-col gap-10 text-[2.7vh] poppins-medium overflow-y-scroll overflow-x-hidden'>
           <MCQTemplate qn = {questions[qnNumber-1]}/>
         <div className = 'py-5 flex justify-center gap-4 flex-wrap'>
           <PreviousButton/>
